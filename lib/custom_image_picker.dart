@@ -1,12 +1,11 @@
-import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/basic.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CustomImagePicker extends StatefulWidget {
+  //ignore: must_be_immutable
   CustomImagePicker(this.callback, {Key key}) : super(key: key);
 
   final ImageUploadInterface callback;
@@ -28,7 +27,7 @@ class _CustomImagePickerState extends State<CustomImagePicker> {
   dynamic _pickImageError;
   bool isVideo = false;
   String _retrieveDataError;
-  ImageUploadInterface callback;
+  final ImageUploadInterface callback;
 
   _CustomImagePickerState(this.callback);
 

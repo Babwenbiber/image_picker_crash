@@ -10,9 +10,9 @@ class MainPage extends StatefulWidget {
 }
 
 class MainState extends State<MainPage> implements ImageUploadInterface {
-  Image selectedImg = null;
+  Image selectedImg;
   CustomImagePicker imagePicker;
-  String imgName = null;
+  String imgName;
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
